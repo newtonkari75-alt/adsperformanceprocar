@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARRO MASTER - Gestão de Tráfego Pago</title>
+    <title>CARRO MASTER - Paid Traffic Management</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -19,7 +19,7 @@
         .bg-brand-dark { background-color: #111111; }
         .bg-brand-gray { background-color: #f5f5f5; }
         
-        /* Smooth transitions */
+        /* Suaves transições de entrada */
         .fade-in {
             animation: fadeIn 0.5s ease-in-out;
         }
@@ -31,7 +31,7 @@
 </head>
 <body class="bg-white text-[#111111]">
 
-    <!-- Header / Navbar -->
+    <!-- Cabeçalho / Navegação -->
     <nav class="bg-brand-dark text-white sticky top-0 z-50 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -39,17 +39,17 @@
                     <span class="text-xl font-black tracking-tighter text-brand-blue">CARRO MASTER</span>
                 </div>
                 
-                <!-- Desktop Menu -->
+                <!-- Menu Desktop -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <button onclick="navigateTo('home')" class="hover:text-brand-blue px-3 py-2 transition-colors">Home</button>
-                        <button onclick="scrollToServices()" class="hover:text-brand-blue px-3 py-2 transition-colors">Serviços</button>
-                        <button onclick="navigateTo('contato')" class="hover:text-brand-blue px-3 py-2 transition-colors">Contato</button>
-                        <button onclick="navigateTo('contato')" class="bg-brand-blue hover:bg-blue-700 px-5 py-2 rounded-full transition-all text-sm font-semibold">Análise Gratuita</button>
+                        <button onclick="scrollToServices()" class="hover:text-brand-blue px-3 py-2 transition-colors">Services</button>
+                        <button onclick="navigateTo('contact')" class="hover:text-brand-blue px-3 py-2 transition-colors">Contact</button>
+                        <button onclick="navigateTo('contact')" class="bg-brand-blue hover:bg-blue-700 px-5 py-2 rounded-full transition-all text-sm font-semibold">Free Analysis</button>
                     </div>
                 </div>
 
-                <!-- Mobile menu button -->
+                <!-- Botão Menu Mobile -->
                 <div class="md:hidden">
                     <button id="menu-btn" class="p-2 rounded-md hover:bg-gray-800 focus:outline-none">
                         <i data-lucide="menu" id="menu-icon"></i>
@@ -58,17 +58,17 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-gray-800 py-4 px-6 space-y-4">
             <button onclick="navigateTo('home')" class="block w-full text-left py-2 hover:text-brand-blue">Home</button>
-            <button onclick="navigateTo('contato')" class="block w-full text-left py-2 hover:text-brand-blue">Contato</button>
-            <button onclick="navigateTo('contato')" class="block w-full text-center bg-brand-blue py-3 rounded-lg font-semibold">Análise Gratuita</button>
+            <button onclick="navigateTo('contact')" class="block w-full text-left py-2 hover:text-brand-blue">Contact</button>
+            <button onclick="navigateTo('contact')" class="block w-full text-center bg-brand-blue py-3 rounded-lg font-semibold">Free Analysis</button>
         </div>
     </nav>
 
     <!-- PÁGINA: HOME -->
     <div id="home" class="page-section active fade-in">
-        <!-- Hero Section -->
+        <!-- Secção Hero -->
         <section class="bg-brand-dark text-white py-24 md:py-32 overflow-hidden relative">
             <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-blue rounded-full blur-[120px]"></div>
@@ -76,24 +76,24 @@
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
-                    Gestão Profissional de <br>
-                    <span class="text-brand-blue">Tráfego Pago</span> e Marketing Digital
+                    Professional <span class="text-brand-blue">Paid Traffic</span> <br>
+                    Management & Marketing
                 </h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    A <span class="text-white font-bold">CARRO MASTER</span> ajuda empresas a crescer através de estratégias avançadas de tráfego pago, análise de dados e otimização de campanhas.
+                    <span class="text-white font-bold">CARRO MASTER</span> helps businesses scale through advanced advertising strategies, data analysis, and campaign optimization.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button onclick="navigateTo('contato')" class="bg-brand-blue hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-all flex items-center justify-center gap-2">
-                        Solicitar análise gratuita <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    <button onclick="navigateTo('contact')" class="bg-brand-blue hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-all flex items-center justify-center gap-2">
+                        Get your free analysis <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: FERRAMENTAS -->
+        <!-- SECÇÃO: FERRAMENTAS -->
         <section class="py-12 bg-white border-y border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Especialistas nas principais plataformas</p>
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Experts in Global Platforms</p>
                 <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
                     <div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="layout-grid" class="w-5 h-5 text-brand-blue"></i> Google Ads</div>
                     <div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="layers" class="w-5 h-5 text-brand-blue"></i> Meta Ads</div>
@@ -103,11 +103,11 @@
             </div>
         </section>
 
-        <!-- Seção Serviços -->
-        <section id="servicos" class="py-24 bg-brand-gray">
+        <!-- Secção de Serviços -->
+        <section id="services" class="py-24 bg-brand-gray">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#111111] mb-4">Nossas Soluções</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#111111] mb-4">Our Solutions</h2>
                     <div class="w-20 h-1.5 bg-brand-blue mx-auto rounded-full"></div>
                 </div>
                 
@@ -116,63 +116,63 @@
                         <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
                             <i data-lucide="target" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Gestão de Google Ads</h3>
-                        <p class="text-gray-600 leading-relaxed">Criação, otimização e gestão de campanhas de alto desempenho focado em resultados reais para o nicho automotivo e além.</p>
+                        <h3 class="text-xl font-bold mb-4">Google Ads Management</h3>
+                        <p class="text-gray-600 leading-relaxed">End-to-end campaign management focused on high-performance results and search engine dominance.</p>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
                         <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
                             <i data-lucide="trending-up" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Marketing de Performance</h3>
-                        <p class="text-gray-600 leading-relaxed">Estratégias focadas em ROI e crescimento escalável para negócios digitais e lojas físicas.</p>
+                        <h3 class="text-xl font-bold mb-4">Performance Marketing</h3>
+                        <p class="text-gray-600 leading-relaxed">ROI-focused strategies designed for scalable growth for both digital and brick-and-mortar businesses.</p>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
                         <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
                             <i data-lucide="bar-chart-3" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Análise de Dados</h3>
-                        <p class="text-gray-600 leading-relaxed">Monitoramento de métricas e otimização contínua baseada em inteligência de dados de mercado.</p>
+                        <h3 class="text-xl font-bold mb-4">Data & Analytics</h3>
+                        <p class="text-gray-600 leading-relaxed">Deep monitoring and continuous optimization based on data-driven market intelligence.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: CLIENTES / PROJETOS -->
+        <!-- SECÇÃO DE EXPERIÊNCIA -->
         <section class="py-24 bg-brand-dark text-white">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <i data-lucide="award" class="w-12 h-12 text-brand-blue mx-auto mb-6"></i>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Experiência e Resultados</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Experience and Results</h2>
                 <p class="text-xl text-gray-400 leading-relaxed">
-                    A <span class="text-white font-semibold">CARRO MASTER</span> já ajudou dezenas de empresas a melhorarem sua presença online através de campanhas estratégicas, otimizando investimentos e maximizando o retorno sobre cada centavo investido.
+                    <span class="text-white font-semibold">CARRO MASTER</span> has empowered dozens of companies to enhance their online presence through strategic campaigns, optimizing investments and maximizing return on every dollar spent.
                 </p>
             </div>
         </section>
 
-        <!-- Seção Sobre -->
+        <!-- Secção Sobre -->
         <section class="py-24 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-bold mb-8">Sobre a CARRO MASTER</h2>
+                <h2 class="text-3xl font-bold mb-8">About CARRO MASTER</h2>
                 <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
                     <p>
-                        A <span class="font-semibold text-[#111111]">CARRO MASTER</span> é uma empresa especializada em marketing digital e gestão avançada de tráfego pago.
+                        <span class="font-semibold text-[#111111]">CARRO MASTER</span> is a boutique agency specializing in digital marketing and advanced paid traffic management.
                     </p>
                     <p>
-                        Nosso foco é ajudar empresas a acelerarem seu crescimento no digital, dominando as ferramentas de busca e redes sociais para gerar vendas e leads qualificados.
+                        Our mission is to help companies accelerate their digital growth, mastering search engines and social platforms to generate high-quality sales and leads.
                     </p>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- PÁGINA: CONTATO -->
-    <div id="contato" class="page-section fade-in py-16 md:py-24 bg-white">
+    <!-- PÁGINA: CONTACTO -->
+    <div id="contact" class="page-section fade-in py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
-                    <h1 class="text-4xl font-bold text-brand-dark mb-6">Fale Conosco</h1>
-                    <p class="text-lg text-gray-600 mb-10">Estamos prontos para analisar seu negócio e propor a melhor estratégia de crescimento.</p>
+                    <h1 class="text-4xl font-bold text-brand-dark mb-6">Get in Touch</h1>
+                    <p class="text-lg text-gray-600 mb-10">We are ready to analyze your business and propose the best growth strategy.</p>
                     
                     <div class="space-y-8">
                         <div class="flex items-start gap-4">
@@ -180,17 +180,8 @@
                                 <i data-lucide="mail" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold">E-mail</h4>
-                                <p class="text-gray-600">contato@carromaster.com.br</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-brand-gray p-3 rounded-lg text-brand-blue">
-                                <i data-lucide="phone" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold">Telefone</h4>
-                                <p class="text-gray-600">(11) 7953-1010</p>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-gray-600">nogueiraoliveiraassessoria@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -198,28 +189,28 @@
                                 <i data-lucide="map-pin" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold">Localização</h4>
-                                <p class="text-gray-600">São Paulo - SP, Brasil</p>
+                                <h4 class="font-bold">Location</h4>
+                                <p class="text-gray-600">AV GUAXENDUBA, 1610, BAIRRO DE FATIMA <br> São Luis - MA | CEP 65.015-560</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-brand-gray p-8 rounded-3xl">
-                    <form class="space-y-6" onsubmit="event.preventDefault(); showMessage('Solicitação enviada! A equipe CARRO MASTER entrará em contato em breve.');">
+                    <form class="space-y-6" onsubmit="event.preventDefault(); showMessage('Request sent! The CARRO MASTER team will contact you shortly.');">
                         <div>
-                            <label class="block text-sm font-semibold mb-2">Nome</label>
-                            <input type="text" class="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Seu nome" required>
+                            <label class="block text-sm font-semibold mb-2">Name</label>
+                            <input type="text" class="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Your name" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold mb-2">E-mail</label>
-                            <input type="email" class="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="seu@email.com" required>
+                            <label class="block text-sm font-semibold mb-2">Email</label>
+                            <input type="email" class="w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="your@email.com" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold mb-2">Mensagem</label>
-                            <textarea class="w-full p-3 h-32 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Como a CARRO MASTER pode ajudar seu negócio?"></textarea>
+                            <label class="block text-sm font-semibold mb-2">Message</label>
+                            <textarea class="w-full p-3 h-32 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="How can CARRO MASTER help your business?"></textarea>
                         </div>
-                        <button class="w-full bg-brand-blue text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all">Enviar Solicitação</button>
+                        <button class="w-full bg-brand-blue text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all">Submit Request</button>
                     </form>
                 </div>
             </div>
@@ -227,124 +218,120 @@
     </div>
 
     <!-- PÁGINA: POLÍTICA DE PRIVACIDADE -->
-    <div id="politica" class="page-section fade-in py-16 md:py-24 bg-white">
+    <div id="privacy" class="page-section fade-in py-16 md:py-24 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold mb-8 flex items-center gap-2">
-                <i data-lucide="shield-check" class="text-brand-blue"></i> Política de Privacidade
+                <i data-lucide="shield-check" class="text-brand-blue"></i> Privacy Policy
             </h1>
             <div class="prose prose-slate text-gray-600 space-y-6">
-                <p>A <strong>CARRO MASTER</strong> compromete-se com a transparência no tratamento de dados.</p>
+                <p><strong>CARRO MASTER</strong> is committed to transparency in data processing.</p>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Coleta de dados:</strong> Coletamos apenas informações necessárias via formulário para fins de contato comercial.</li>
-                    <li><strong>Cookies:</strong> Utilizamos cookies para análise de navegação via Google Analytics.</li>
-                    <li><strong>Proteção:</strong> Seus dados estão seguros e não são compartilhados com terceiros sem consentimento.</li>
-                    <li><strong>Contato:</strong> Dúvidas podem ser enviadas para nosso e-mail oficial.</li>
+                    <li><strong>Data Collection:</strong> We only collect necessary information via forms for business contact purposes.</li>
+                    <li><strong>Cookies:</strong> We use cookies for navigation analysis via Google Analytics.</li>
+                    <li><strong>Protection:</strong> Your data is secure and will not be shared with third parties without consent.</li>
+                    <li><strong>Contact:</strong> Any questions regarding privacy can be sent to our official email.</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <!-- PÁGINA: TERMOS DE USO -->
-    <div id="termos" class="page-section fade-in py-16 md:py-24 bg-white">
+    <div id="terms" class="page-section fade-in py-16 md:py-24 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold mb-8 flex items-center gap-2">
-                <i data-lucide="file-text" class="text-brand-blue"></i> Termos de Uso
+                <i data-lucide="file-text" class="text-brand-blue"></i> Terms of Use
             </h1>
             <div class="prose prose-slate text-gray-600 space-y-6">
-                <p>Ao utilizar este site, concorda com as seguintes condições da <strong>CARRO MASTER</strong>:</p>
+                <p>By using this website, you agree to the following conditions from <strong>CARRO MASTER</strong>:</p>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>O site é puramente informativo sobre os nossos serviços de marketing e tráfego.</li>
-                    <li>A CARRO MASTER não garante lucros específicos, pois o marketing depende de variáveis externas.</li>
-                    <li>Podemos modificar o conteúdo ou estes termos a qualquer momento para melhoria do serviço.</li>
-                    <li>O contato oficial para suporte é via e-mail ou canais telefônicos listados.</li>
+                    <li>The website is purely informative about our marketing and traffic management services.</li>
+                    <li>CARRO MASTER does not guarantee specific profits, as marketing depends on external variables.</li>
+                    <li>We may modify the content or these terms at any time to improve the service.</li>
+                    <li>Official contact for support is via the listed email channels.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <div>
                     <h3 class="text-xl font-black mb-6 text-brand-blue uppercase tracking-tighter">CARRO MASTER</h3>
                     <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        CARRO MASTER LTDA<br>
-                        CNPJ: 24.797.216/0001-98
+                        CARRO MASTER LTD<br>
+                        Tax ID: 24.797.216/0001-98
                     </p>
                     <div class="space-y-2 text-sm text-gray-400">
-                        <p>R DOUTOR VEIGA FILHO, 61, Santa Cecília</p>
-                        <p>São Paulo - SP | CEP 01229-001</p>
-                        <p>contato@carromaster.com.br</p>
+                        <p>AV GUAXENDUBA, 1610, BAIRRO DE FATIMA</p>
+                        <p>São Luis - MA | CEP 65.015-560</p>
+                        <p>nogueiraoliveiraassessoria@gmail.com</p>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-6">Links Legais</h4>
+                    <h4 class="font-bold mb-6">Legal Links</h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><button onclick="navigateTo('home')" class="hover:text-white">Início</button></li>
-                        <li><button onclick="navigateTo('politica')" class="hover:text-white">Política de Privacidade</button></li>
-                        <li><button onclick="navigateTo('termos')" class="hover:text-white">Termos de Uso</button></li>
-                        <li><button onclick="navigateTo('contato')" class="hover:text-white">Contato</button></li>
+                        <li><button onclick="navigateTo('home')" class="hover:text-white">Home</button></li>
+                        <li><button onclick="navigateTo('privacy')" class="hover:text-white">Privacy Policy</button></li>
+                        <li><button onclick="navigateTo('terms')" class="hover:text-white">Terms of Use</button></li>
+                        <li><button onclick="navigateTo('contact')" class="hover:text-white">Contact</button></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold mb-6">Canais Diretos</h4>
-                    <p class="text-gray-400 text-sm mb-4">Atendimento CARRO MASTER de Segunda a Sexta, das 09h às 18h.</p>
-                    <p class="text-brand-blue font-bold text-lg">(11) 7953-1010</p>
+                    <h4 class="font-bold mb-6">Support Channels</h4>
+                    <p class="text-gray-400 text-sm mb-4">CARRO MASTER Support: Monday to Friday, 9 AM to 6 PM (BRT).</p>
+                    <p class="text-brand-blue font-bold text-lg">nogueiraoliveiraassessoria@gmail.com</p>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
-                <p>© <span id="year"></span> CARRO MASTER. Todos os direitos reservados.</p>
+                <p>© <span id="year"></span> CARRO MASTER. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Feedback Message Box (Custom alert) -->
+    <!-- Caixa de Mensagem de Feedback -->
     <div id="msg-box" class="fixed bottom-10 right-10 bg-brand-dark text-white p-4 rounded-xl shadow-2xl border border-brand-blue transform translate-y-20 transition-transform duration-300 z-[100] hidden">
         <p id="msg-text"></p>
     </div>
 
     <script>
-        // Initialize Lucide Icons
+        // Inicializar Ícones Lucide
         lucide.createIcons();
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Navigation Logic
+        // Lógica de Navegação
         function navigateTo(pageId) {
-            // Hide all pages
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(s => s.classList.remove('active'));
             
-            // Show selected page
             const target = document.getElementById(pageId);
             if(target) {
                 target.classList.add('active');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
-            
-            // Close mobile menu
             document.getElementById('mobile-menu').classList.add('hidden');
         }
 
         function scrollToServices() {
             navigateTo('home');
             setTimeout(() => {
-                const element = document.getElementById('servicos');
+                const element = document.getElementById('services');
                 element.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         }
 
-        // Mobile Menu Toggle
+        // Alternar Menu Mobile
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Custom Message Handler (instead of alert)
+        // Manipulador de Mensagens Customizado
         function showMessage(text) {
             const box = document.getElementById('msg-box');
             const boxText = document.getElementById('msg-text');
@@ -355,7 +342,7 @@
             setTimeout(() => {
                 box.classList.add('translate-y-20');
                 setTimeout(() => box.classList.add('hidden'), 300);
-            }, 3500);
+            }, 4000);
         }
     </script>
 </body>
